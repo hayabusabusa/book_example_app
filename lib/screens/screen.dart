@@ -1,0 +1,1 @@
+export './p72/p72_screen.dart';

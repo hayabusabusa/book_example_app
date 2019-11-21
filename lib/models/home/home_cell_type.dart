@@ -1,0 +1,4 @@
+
+enum HomeCellType {
+  p72
+}
