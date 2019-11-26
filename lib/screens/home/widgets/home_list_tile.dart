@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:book_exapmle_app/models/home/home.dart';
+import 'package:book_exapmle_app/models/p85/p85_model.dart';
 import 'package:book_exapmle_app/screens/screen.dart';
 
 class HomeListTile extends StatelessWidget {
@@ -91,6 +92,23 @@ class HomeListTile extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) {
                 return P83Screen();
+              })
+            );
+          },
+        );
+      // - P85
+      case HomeCellType.p85:
+        return ListTile(
+          title: Text('Navigator push with data'),
+          subtitle: Text('Basic of navigation and state.'),
+          leading: CircleAvatar(
+            child: Text('P85'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P85Screen(todos: List.generate(20, (i) => P85Todo(title: 'TODO $i', description: 'TODO $i の詳細')));
               })
             );
           },

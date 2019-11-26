@@ -4,3 +4,5 @@ export './p76/p76_screen.dart';
 export './p78/p78_screen.dart';
 export './p83/p83_screen.dart';
 export './p83/p83_detail_screen.dart';
+export './p85/p85_screen.dart';
+export './p85/p85_detail_screen.dart';

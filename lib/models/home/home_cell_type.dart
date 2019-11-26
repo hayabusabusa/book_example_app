@@ -4,5 +4,6 @@ enum HomeCellType {
   p75,
   p76,
   p78,
-  p83
+  p83,
+  p85
 }
