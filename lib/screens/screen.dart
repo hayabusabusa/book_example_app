@@ -6,3 +6,5 @@ export './p83/p83_screen.dart';
 export './p83/p83_detail_screen.dart';
 export './p85/p85_screen.dart';
 export './p85/p85_detail_screen.dart';
+export './p87/p87_screen.dart';
+export './p87/p87_selection_screen.dart';

@@ -113,6 +113,22 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      case HomeCellType.p87:
+        return ListTile(
+          title: Text('Navigator pop with data'),
+          subtitle: Text('Basic of navigation and state.'),
+          leading: CircleAvatar(
+            child: Text('P87'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P87Screen();
+              })
+            );
+          },
+        );
       default:
         return ListTile(
           title: Text('UNKNOWN'),
