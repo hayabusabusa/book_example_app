@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:book_exapmle_app/models/home/home.dart';
-import 'package:book_exapmle_app/screens/screen.dart';
+import 'package:book_exapmle_app/screens/home/widgets/home_widget.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -10,85 +10,8 @@ class HomeScreen extends StatelessWidget {
     HomeCellType.p72,
     HomeCellType.p75,
     HomeCellType.p76,
-    HomeCellType.p78];
-
-  // MARK: Build Widget
-
-  Widget _buildListTile(BuildContext context, HomeCellType cellType) {
-    switch (cellType) {
-      // - P72
-      case HomeCellType.p72:
-        return ListTile(
-          title: Text('Container'),
-          subtitle: Text('Basic of layout.'),
-          leading: CircleAvatar(
-            child: Text('P72'),
-          ),
-          trailing: Icon(Icons.chevron_right),
-          onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) {
-                return P72Screen();
-              })
-            );
-          },
-        );
-      // - P75
-      case HomeCellType.p75:
-        return ListTile(
-          title: Text('GridView'),
-          subtitle: Text('Basic of layout.'),
-          leading: CircleAvatar(
-            child: Text('P75'),
-          ),
-          trailing: Icon(Icons.chevron_right),
-          onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) {
-                return P75Screen();
-              })
-            );
-          },
-        );
-      // - P76
-      case HomeCellType.p76:
-        return ListTile(
-          title: Text('ListView'),
-          subtitle: Text('Basic of layout.'),
-          leading: CircleAvatar(
-            child: Text('P76'),
-          ),
-          trailing: Icon(Icons.chevron_right),
-          onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) {
-                return P76Screen();
-              })
-            );
-          },
-        );
-      case HomeCellType.p78:
-        return ListTile(
-          title: Text('Card'),
-          subtitle: Text('Basic of layout.'),
-          leading: CircleAvatar(
-            child: Text('P78'),
-          ),
-          trailing: Icon(Icons.chevron_right),
-          onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) {
-                return P78Screen();
-              })
-            );
-          },
-        );
-      default:
-        return ListTile(
-          title: Text('UNKNOWN'),
-        );
-    }
-  }
+    HomeCellType.p78,
+    HomeCellType.p83];
 
   // MARK: Lifecycle
 
@@ -99,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         title: Text('Samples'),
       ),
       body: ListView(
-        children: _rows.map((row) => _buildListTile(context, row)).toList(),
+        children: _rows.map((row) => HomeListTile(row)).toList(),
       ),
     );
   }
