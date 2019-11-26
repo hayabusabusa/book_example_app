@@ -9,7 +9,8 @@ class HomeScreen extends StatelessWidget {
   final List<HomeCellType> _rows = [
     HomeCellType.p72,
     HomeCellType.p75,
-    HomeCellType.p76];
+    HomeCellType.p76,
+    HomeCellType.p78];
 
   // MARK: Build Widget
 
@@ -62,6 +63,22 @@ class HomeScreen extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) {
                 return P76Screen();
+              })
+            );
+          },
+        );
+      case HomeCellType.p78:
+        return ListTile(
+          title: Text('Card'),
+          subtitle: Text('Basic of layout.'),
+          leading: CircleAvatar(
+            child: Text('P78'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P78Screen();
               })
             );
           },
