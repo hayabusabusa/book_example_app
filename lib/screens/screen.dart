@@ -11,3 +11,4 @@ export './p87/p87_selection_screen.dart';
 export './p91/p91_screen.dart';
 export './p91/p91_detail_screen.dart';
 export './p94/P94_screen.dart';
+export './p95/p95_screen.dart';

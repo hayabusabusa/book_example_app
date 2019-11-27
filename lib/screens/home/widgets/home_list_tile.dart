@@ -167,6 +167,23 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      // - P95
+      case HomeCellType.p95:
+        return ListTile(
+          title: Text('StatefullWidget with parent widget.'),
+          subtitle: Text('Basic of state.'),
+          leading: CircleAvatar(
+            child: Text('P95'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P95Screen();
+              })
+            );
+          },
+        );
       default:
         return ListTile(
           title: Text('UNKNOWN'),
