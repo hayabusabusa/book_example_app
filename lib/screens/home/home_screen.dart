@@ -13,7 +13,8 @@ class HomeScreen extends StatelessWidget {
     HomeCellType.p78,
     HomeCellType.p83,
     HomeCellType.p85,
-    HomeCellType.p87];
+    HomeCellType.p87,
+    HomeCellType.p91];
 
   // MARK: Lifecycle
 
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
         title: Text('Samples'),
       ),
       body: ListView(
-        children: _rows.map((row) => HomeListTile(row)).toList(),
+        children: _rows.map((row) => HomeListTile(cellType: row)).toList(),
       ),
     );
   }

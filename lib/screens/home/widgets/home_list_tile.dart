@@ -7,7 +7,10 @@ class HomeListTile extends StatelessWidget {
 
   final HomeCellType _cellType;
 
-  HomeListTile(this._cellType);
+  HomeListTile({ Key key, @required HomeCellType cellType }):
+    assert(cellType != null),
+    _cellType = cellType,
+    super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +116,7 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      // - P87
       case HomeCellType.p87:
         return ListTile(
           title: Text('Navigator pop with data'),
@@ -125,6 +129,23 @@ class HomeListTile extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) {
                 return P87Screen();
+              })
+            );
+          },
+        );
+      // - P91
+      case HomeCellType.p91:
+        return ListTile(
+          title: Text('Navigator push with Hero animation'),
+          subtitle: Text('Basic of navigation and state.'),
+          leading: CircleAvatar(
+            child: Text('P91'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P91Screen();
               })
             );
           },
