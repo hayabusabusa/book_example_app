@@ -8,4 +8,5 @@ enum HomeCellType {
   p85,
   p87,
   p91,
+  p94,
 }

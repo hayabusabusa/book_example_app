@@ -86,7 +86,7 @@ class HomeListTile extends StatelessWidget {
       case HomeCellType.p83:
         return ListTile(
           title: Text('Navigator push'),
-          subtitle: Text('Basic of navigation and state.'),
+          subtitle: Text('Basic of navigation.'),
           leading: CircleAvatar(
             child: Text('P83'),
           ),
@@ -103,7 +103,7 @@ class HomeListTile extends StatelessWidget {
       case HomeCellType.p85:
         return ListTile(
           title: Text('Navigator push with data'),
-          subtitle: Text('Basic of navigation and state.'),
+          subtitle: Text('Basic of navigation.'),
           leading: CircleAvatar(
             child: Text('P85'),
           ),
@@ -120,7 +120,7 @@ class HomeListTile extends StatelessWidget {
       case HomeCellType.p87:
         return ListTile(
           title: Text('Navigator pop with data'),
-          subtitle: Text('Basic of navigation and state.'),
+          subtitle: Text('Basic of navigation.'),
           leading: CircleAvatar(
             child: Text('P87'),
           ),
@@ -137,7 +137,7 @@ class HomeListTile extends StatelessWidget {
       case HomeCellType.p91:
         return ListTile(
           title: Text('Navigator push with Hero animation'),
-          subtitle: Text('Basic of navigation and state.'),
+          subtitle: Text('Basic of navigation.'),
           leading: CircleAvatar(
             child: Text('P91'),
           ),
@@ -146,6 +146,23 @@ class HomeListTile extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) {
                 return P91Screen();
+              })
+            );
+          },
+        );
+      // - P94
+      case HomeCellType.p94:
+        return ListTile(
+          title: Text('StatefullWidget manages own state.'),
+          subtitle: Text('Basic of state.'),
+          leading: CircleAvatar(
+            child: Text('P94'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P94Screen();
               })
             );
           },
