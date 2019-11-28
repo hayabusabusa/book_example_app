@@ -66,6 +66,7 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      // - P78
       case HomeCellType.p78:
         return ListTile(
           title: Text('Card'),
@@ -180,6 +181,23 @@ class HomeListTile extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) {
                 return P95Screen();
+              })
+            );
+          },
+        );
+      // - P97
+      case HomeCellType.p97:
+        return ListTile(
+          title: Text('State managed by parent and own state.'),
+          subtitle: Text('Basic of state.'),
+          leading: CircleAvatar(
+            child: Text('P97'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P97Screen();
               })
             );
           },
