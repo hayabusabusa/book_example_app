@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:book_exapmle_app/screens/screen.dart';
+import 'package:book_exapmle_app/screens/p91/widgets/p91_widget.dart';
 
 class P91Screen extends StatelessWidget {
   final String _imageURL = 'https://picsum.photos/250?image=9';
@@ -19,10 +20,13 @@ class P91Screen extends StatelessWidget {
         ),
         onTap: () {
           Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => P91DetailScreen(imageURL: _imageURL,),
-              // PresentModal みたいな遷移では Hero のアニメーションが実行されなかった
-              //fullscreenDialog: true,
+            // MaterialPageRoute(
+            //   builder: (context) => P91DetailScreen(imageURL: _imageURL,),
+            //   // PresentModal みたいな遷移では Hero のアニメーションが実行されなかった
+            //   //fullscreenDialog: true,
+            // )
+            FadeRoute(
+              page: P91DetailScreen(imageURL: _imageURL,),
             )
           );
         },
