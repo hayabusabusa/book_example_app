@@ -17,7 +17,8 @@ class HomeScreen extends StatelessWidget {
     HomeCellType.p91,
     HomeCellType.p94,
     HomeCellType.p95,
-    HomeCellType.p97];
+    HomeCellType.p97,
+    HomeCellType.p109];
 
   // MARK: Lifecycle
 

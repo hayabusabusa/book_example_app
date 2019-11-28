@@ -202,6 +202,23 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      // - P109
+      case HomeCellType.p109:
+        return ListTile(
+          title: Text('Animation with AnimationController.'),
+          subtitle: Text('Basic of animation.'),
+          leading: CircleAvatar(
+            child: Text('P109'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P109Screen();
+              })
+            );
+          },
+        );
       default:
         return ListTile(
           title: Text('UNKNOWN'),
