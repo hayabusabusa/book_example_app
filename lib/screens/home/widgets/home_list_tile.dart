@@ -219,6 +219,23 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      // - P137
+      case HomeCellType.p137:
+        return ListTile(
+          title: Text('Const widget'),
+          subtitle: Text('Advanced usage of widget.'),
+          leading: CircleAvatar(
+            child: Text('P137'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P137Screen();
+              })
+            );
+          },
+        );
       // - Image Picker Sample
       case HomeCellType.pickImage:
         return ListTile(
