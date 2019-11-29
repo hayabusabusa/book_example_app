@@ -219,6 +219,25 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      // - Image Picker Sample
+      case HomeCellType.pickImage:
+        return ListTile(
+          title: Text('Image Picker sample'),
+          subtitle: Text('Extra sample.'),
+          leading: CircleAvatar(
+            child: Text('IP'),
+            backgroundColor: Colors.red,
+            foregroundColor: Colors.white,
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return PickImageScreen();
+              })
+            );
+          },
+        );
       default:
         return ListTile(
           title: Text('UNKNOWN'),
