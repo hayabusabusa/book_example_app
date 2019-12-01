@@ -15,4 +15,5 @@ export './p95/p95_screen.dart';
 export './p97/p97_screen.dart';
 export './p109/p109_screen.dart';
 export './p137/p137_screen.dart';
+export './p139/p139_screen.dart';
 export './pick_image/pick_image_screen.dart';

@@ -236,6 +236,23 @@ class HomeListTile extends StatelessWidget {
             );
           },
         );
+      // - P139
+      case HomeCellType.p139:
+        return ListTile(
+          title: Text('Inherited widget'),
+          subtitle: Text('Advanced usage of widget.'),
+          leading: CircleAvatar(
+            child: Text('P139'),
+          ),
+          trailing: Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return P139Screen();
+              })
+            );
+          },
+        );
       // - Image Picker Sample
       case HomeCellType.pickImage:
         return ListTile(

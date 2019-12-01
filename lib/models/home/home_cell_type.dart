@@ -13,5 +13,6 @@ enum HomeCellType {
   p97,
   p109,
   p137,
+  p139,
   pickImage,
 }
